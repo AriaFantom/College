@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 int main()
 {
@@ -11,7 +10,13 @@ int main()
     printf("Enter a string: ");
     scanf("%s", str);  // read the string from the user
 
-    length = strlen(str);  // get the length of the string
+    // calculate the length of the string
+    length = 0;
+    while (str[length] != '\0')
+    {
+        length++;
+    }
+    printf("Length of the string is %d\n", length);
 
     // check if the string is palindrome
     for (i = 0; i < length / 2; i++)
